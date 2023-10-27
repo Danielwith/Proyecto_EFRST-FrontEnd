@@ -1,0 +1,37 @@
+<!-- Adoption Start -->
+<div class="container-fluid py-5">
+  <div class="container">
+    <div class="border-start border-5 border-primary ps-4 mb-5" style="max-width: 600px;">
+      <h6 class="text-primary text-uppercase">ADOPCION</h6>
+      <h1 class="display-5 text-uppercase mb-0 fw-bold">En busca de una familia</h1>
+    </div>
+    <!-- Carousel Start-->
+    <owl-carousel-o class="animal-carousel position-relative" [options]="configuracion" style="padding-right: 25px;">
+      <ng-template carouselSlide *ngFor="let animal of CARROUSEL_DATA">
+        <div class="animal-item">
+          <div class="position-relative overflow-hidden">
+            <img class="img-fluid w-100" src="./assets/img/cat.png" alt="">
+            <div class="animal-overlay">
+              <div class="d-flex align-items-center justify-content-start">
+                <a class="btn btn-light btn-square mx-1" href="#"><i class="bi bi-heart-fill"></i></a>
+                <a class="btn btn-light btn-square mx-1" href="#"><i class="bi bi-eye-fill"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="bg-light text-center p-4">
+            <h5 class="text-uppercase">{{animal.nombre}}</h5>
+            <p class="m-0">{{animal.personalidad}}</p>
+          </div>
+        </div>
+      </ng-template>
+    </owl-carousel-o>
+    <!-- Carousel End -->
+    <div class="text-center">
+      <button class="btn-material-primary" mat-raised-button>
+        <mat-icon>keyboard_arrow_down</mat-icon>Ver más
+      </button>
+
+    </div>
+  </div>
+</div>
+<!-- Adoption End -->

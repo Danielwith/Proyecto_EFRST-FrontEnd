@@ -34,6 +34,9 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 
+// Owl Carousel
+import { CarouselModule } from 'ngx-owl-carousel-o';
+
 @NgModule({
   declarations: [],
   imports: [
@@ -100,6 +103,7 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
     MatSortModule,
     ReactiveFormsModule,
     FormsModule,
+    CarouselModule,
   ],
 })
 export class SharedModule {}

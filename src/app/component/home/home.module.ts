@@ -10,6 +10,10 @@ import { HomeComponent } from './home.component';
 import { BannerIndexComponent } from './index-home/banner-index/banner-index.component';
 import { InfoIndexComponent } from './index-home/info-index/info-index.component';
 import { ServicioIndexComponent } from './index-home/servicio-index/servicio-index.component';
+import { HistoriasIndexComponent } from './index-home/historias-index/historias-index.component';
+import { AdopcionIndexComponent } from './index-home/adopcion-index/adopcion-index.component';
+import { DonacionIndexComponent } from './index-home/donacion-index/donacion-index.component';
+import { PatrocinadorIndexComponent } from './index-home/patrocinador-index/patrocinador-index.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +24,10 @@ import { ServicioIndexComponent } from './index-home/servicio-index/servicio-ind
     BannerIndexComponent,
     InfoIndexComponent,
     ServicioIndexComponent,
+    HistoriasIndexComponent,
+    AdopcionIndexComponent,
+    DonacionIndexComponent,
+    PatrocinadorIndexComponent,
   ],
   imports: [CommonModule, HomeRoutingModule, SharedModule],
 })

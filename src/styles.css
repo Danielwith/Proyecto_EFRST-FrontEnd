@@ -1,4 +1,5 @@
-/* You can add global styles to this file, and also import other style files */
+/* Puedes añadir estilos globales en este archivo y tambien importar otros archivos de estilo */
+@import url("./app/component/home/index-home/adopcion-index/adopcion-index.component.css");
 
 html,
 body {
@@ -62,4 +63,22 @@ body {
 .nav-pills .active {
   background-color: var(--primary) !important;
   transition: 0.7s;
+}
+
+@media (min-width: 576px) {
+  .blog-item .row {
+    height: 300px;
+  }
+}
+
+/* Donacion-Index Fondo */
+/* Las rutas de imagenes del proyecto, solo se aplican en este archivo css */
+.bg-donation {
+  background: url(./assets/img/dog-bed.jpg) center left no-repeat;
+  background-size: cover;
+}
+
+.btn-material-primary {
+  background-color: var(--primary) !important;
+  color: var(--light) !important;
 }

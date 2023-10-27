@@ -1,0 +1,58 @@
+.animal-carousel .owl-nav {
+  position: absolute;
+  width: 50px;
+  height: 160px;
+  top: calc(50% - 80px);
+  right: 0;
+  z-index: 1;
+}
+
+.owl-nav .owl-prev,
+.owl-nav .owl-next {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  margin: 15px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  background: var(--primary);
+  font-size: 22px;
+  transition: 0.5s;
+}
+
+.animal-carousel .owl-nav .owl-prev:hover,
+.animal-carousel .owl-nav .owl-next:hover {
+  color: var(--dark);
+}
+
+.animal-item img {
+  transition: 0.5s;
+}
+
+.animal-item:hover img {
+  transform: scale(1.2);
+}
+
+.animal-item .animal-overlay {
+  position: absolute;
+  top: 45px;
+  right: 45px;
+  bottom: 45px;
+  left: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(122, 183, 48, 0.8);
+  transition: 0.5s;
+  opacity: 0;
+}
+
+.animal-item:hover .animal-overlay {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 1;
+}
