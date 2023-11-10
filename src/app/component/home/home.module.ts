@@ -14,6 +14,12 @@ import { HistoriasIndexComponent } from './index-home/historias-index/historias-
 import { AdopcionIndexComponent } from './index-home/adopcion-index/adopcion-index.component';
 import { DonacionIndexComponent } from './index-home/donacion-index/donacion-index.component';
 import { PatrocinadorIndexComponent } from './index-home/patrocinador-index/patrocinador-index.component';
+import { CampaignHomeComponent } from './campaign-home/campaign-home.component';
+import { BannerCampaignComponent } from './campaign-home/banner-campaign/banner-campaign.component';
+import { ContenidoCampaignComponent } from './campaign-home/contenido-campaign/contenido-campaign.component';
+import { AdoptHomeComponent } from './adopt-home/adopt-home.component';
+import { BannerAdoptComponent } from './adopt-home/banner-adopt/banner-adopt.component';
+import { TablaAdoptComponent } from './adopt-home/tabla-adopt/tabla-adopt.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +34,12 @@ import { PatrocinadorIndexComponent } from './index-home/patrocinador-index/patr
     AdopcionIndexComponent,
     DonacionIndexComponent,
     PatrocinadorIndexComponent,
+    CampaignHomeComponent,
+    BannerCampaignComponent,
+    ContenidoCampaignComponent,
+    AdoptHomeComponent,
+    BannerAdoptComponent,
+    TablaAdoptComponent,
   ],
   imports: [CommonModule, HomeRoutingModule, SharedModule],
 })

@@ -1,0 +1,72 @@
+<!-- Table Start -->
+<div class="container-fluid">
+  <div class="container  border border-2">
+    <div class="row">
+      <div class="col-4 p-0">
+        <div class="accordion accordion-flush" id="accordionAdopt">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button text-uppercase bg-accordion" type="button" data-bs-toggle="collapse"
+                data-bs-target="#flush-collapse-adopt">
+                <div class="d-flex align-items-center gap-2">
+                  <mat-icon>menu</mat-icon>Caracteristicas
+                </div>
+              </button>
+            </h2>
+            <div id="flush-collapse-adopt" class="accordion-collapse collapse show" data-bs-parent="#accordionAdopt">
+              <div class="accordion-body">
+                <div class="d-flex flex-column justify-content-start gap-2">
+                  <a class="text-body mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Raza</a>
+                  <a class="text-body mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Evento 2</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-8 bg-dark-subtle">
+        <div class="row bg-light" style="height: 56px;">
+          <div class="d-flex justify-content-end align-items-center gap-2">
+            <button class="rounded-5 btn-material-primary w-auto" mat-raised-button [matMenuTriggerFor]="menu">
+              <mat-icon>filter_list</mat-icon>Filtrar
+            </button>
+            <div class="input-group w-auto">
+              <input type="text" class="form-control border-primary border-end-0"
+                aria-label="Text input with segmented dropdown button">
+              <button class="btn btn-outline-primary border-start-0" type="button"><i class="bi bi-search"></i></button>
+            </div>
+          </div>
+
+        </div>
+        <div class="row">
+          <div class="container">
+            <div class="row row-cols-4">
+              <div class="col bg-danger">
+                <div class="w-auto my-2 bg-secondary rounded-1"
+                  [ngStyle]="{'background-image': 'url(./assets/img/cat.png)'}">
+                  <div class="d-flex flex-column">
+                    <div class="">
+                      <h1 class="h5">Name</h1>
+                      <h3 class="h6">Personalidad</h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col">Column</div>
+              <div class="col">Column</div>
+              <div class="col">Column</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Table End -->
+
+<mat-menu #menu="matMenu">
+  <div class="menu-logged">
+    <button mat-menu-item><mat-icon>account_circle</mat-icon>x</button>
+    <button mat-menu-item><mat-icon>exit_to_app</mat-icon>x</button>
+  </div>
+</mat-menu>

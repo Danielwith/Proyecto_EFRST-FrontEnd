@@ -1,0 +1,4 @@
+/* Permite aplicar estilos despues de cargar los componentes */
+:host ::ng-deep .carousel-indicators > button {
+  background-color: black;
+}

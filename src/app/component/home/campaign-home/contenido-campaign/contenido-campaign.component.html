@@ -1,0 +1,74 @@
+<!-- Campaign Start -->
+<div class="container-fluid pt-2">
+  <div class="container">
+    <div class="row gx-5">
+      <div class="col-12">
+        <!-- Tabs -->
+        <div>
+          <ul class="nav nav-pills mb-3 gap-2" id="pills-tab" role="tablist">
+            <li class="nav-item" *ngFor="let item of CAMPAIGN_DATA;let index = index">
+              <button class="nav-link text-uppercase " [ngClass]="(index === 0) ? 'active' : ''"
+                [id]="'pills-'+(index+1)+'-tab'" data-bs-toggle="pill" [attr.data-bs-target]="'#pills-'+(index+1)"
+                type="button" role="tab" [attr.aria-controls]="'pills-'+(index+1)" aria-selected="false"
+                (click)="scrollToCarrousel()">{{item.campaign_year}}</button>
+            </li>
+          </ul>
+        </div>
+        <!-- Tabs End -->
+      </div>
+    </div>
+  </div>
+</div>
+<div #campaign_carrousel class="tab-content bg-body-secondary" id=" pills-tabContent" style="margin-top: -50px;">
+  <div class="tab-pane fade" [ngClass]="(index === 0) ? 'show active' : ''" [id]="'pills-'+(index+1)" role="tabpanel"
+    [attr.aria-labelledby]="'pills-'+(index+1)+'-tab'" *ngFor="let item of CAMPAIGN_DATA;let index = index">
+    <!-- Carrousel Start -->
+    <div class="container-fluid">
+      <div class="container">
+        <div class="border-start border-5 border-primary ps-4 mb-5" style="max-width: 600px;">
+          <h6 class="text-primary text-uppercase"></h6>
+          <h1 class="display-5 text-uppercase mb-0 fw-bold">
+          </h1>
+        </div>
+        <!-- Carousel Start-->
+        <ngb-carousel [interval]="8000" [pauseOnFocus]="false" [pauseOnHover]="false" [showNavigationArrows]="false">
+          <ng-template ngbSlide *ngFor="let campaign of item.campaign_carrousel">
+            <div class="container-fluid py-5">
+              <div class="container">
+                <div class="row gx-5">
+                  <div class="col-lg-7 d-flex flex-column justify-content-evenly">
+                    <div>
+                      <div class="border-start border-5 border-primary ps-4 mb-5">
+                        <h6 class="text-primary text-uppercase">{{campaign.campaign_date | date: 'd \'de\' MMMM
+                          \'del \'y'}} <span *ngIf="campaign.campaign_active">(CAMPAÑA ACTIVA)</span>
+                        </h6>
+                        <h1 class="display-5 text-uppercase mb-0 fw-bold">{{campaign.campaign_name}}
+                        </h1>
+                      </div>
+                      <h4 class="text-body mb-4">{{campaign.campaign_description}}</h4>
+                    </div>
+
+                    <button
+                      class="rounded-5 btn-material-primary w-auto align-self-sm-center align-self-md-center align-self-lg-start my-3"
+                      mat-raised-button *ngIf="campaign.campaign_active" (click)="suscribeToCampaign()">
+                      <mat-icon>star</mat-icon>Me interesa
+                    </button>
+                  </div>
+                  <div class="col-lg-5 mb-5 mb-lg-0" style="min-height: 500px;">
+                    <div class="position-relative h-100">
+                      <img class="position-absolute w-100 h-100 rounded" src="./assets/img/cat.png"
+                        style="object-fit: cover; object-position: left;">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </ng-template>
+        </ngb-carousel>
+        <!-- Carousel End -->
+      </div>
+    </div>
+    <!-- Carrousel End -->
+  </div>
+</div>
+<!-- Campaign End -->

@@ -37,6 +37,9 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 // Owl Carousel
 import { CarouselModule } from 'ngx-owl-carousel-o';
 
+// Ng Bootstrap
+import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
+
 @NgModule({
   declarations: [],
   imports: [
@@ -71,6 +74,7 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
     MatSortModule,
     ReactiveFormsModule,
     FormsModule,
+    NgbCarouselModule,
   ],
   exports: [
     MatSliderModule,
@@ -104,6 +108,7 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
     ReactiveFormsModule,
     FormsModule,
     CarouselModule,
+    NgbCarouselModule,
   ],
 })
 export class SharedModule {}

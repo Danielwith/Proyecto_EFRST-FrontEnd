@@ -19,7 +19,7 @@ body {
 }
 
 .accordion {
-  --bs-accordion-bg: transparent !important;
+  --bs-accordion-bg: transparent;
 }
 
 .border-primary {
@@ -43,8 +43,13 @@ body {
   --bs-gradient: none;
 }
 
-.hero-header {
+.index-header {
   background: url(./assets/img/hero-image.jpg) top right no-repeat;
+  background-size: cover;
+}
+
+.campaign-header {
+  background: url(./assets/img/cat-in-the-streets.jpg) center center no-repeat;
   background-size: cover;
 }
 
