@@ -1,3 +1,21 @@
 .bg-accordion {
   background-color: var(--primary);
 }
+.btn-icon {
+  color: white;
+}
+.btn-icon:hover {
+  color: var(--primary);
+  cursor: pointer;
+  transition: all ease 0.3s;
+}
+
+.bg-adopt {
+  background-color: var(--primary);
+  
+}
+.img-config {
+  background-size: cover;
+  height: 250px;
+  filter: saturate(120%);
+}
