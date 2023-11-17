@@ -20,6 +20,7 @@ import { ContenidoCampaignComponent } from './campaign-home/contenido-campaign/c
 import { AdoptHomeComponent } from './adopt-home/adopt-home.component';
 import { BannerAdoptComponent } from './adopt-home/banner-adopt/banner-adopt.component';
 import { TablaAdoptComponent } from './adopt-home/tabla-adopt/tabla-adopt.component';
+import { ModalAdoptComponent } from './adopt-home/modal-adopt/modal-adopt.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { TablaAdoptComponent } from './adopt-home/tabla-adopt/tabla-adopt.compon
     AdoptHomeComponent,
     BannerAdoptComponent,
     TablaAdoptComponent,
+    ModalAdoptComponent,
   ],
   imports: [CommonModule, HomeRoutingModule, SharedModule],
 })

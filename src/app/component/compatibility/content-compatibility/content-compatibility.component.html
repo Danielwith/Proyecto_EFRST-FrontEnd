@@ -1,0 +1,34 @@
+<div class="container w-50 rounded-2 py-2 content-modal">
+  <div class="row">
+    <div class="col-12 text-start">
+      <button mat-button><mat-icon>arrow_back</mat-icon>Volver</button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="text-center my-2">
+      <p class="h4 text-light fw-lighter">Question</p>
+    </div>
+    <div class="py-1">
+      <mat-radio-group color="primary" aria-labelledby="questions-group-label"
+        class="d-flex flex-column gap-1 align-items-start" [(ngModel)]="favoriteSeason">
+        <mat-radio-button class="example-radio-button" *ngFor="let season of seasons" [value]="season">
+          {{season}}
+        </mat-radio-button>
+      </mat-radio-group>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-8 mx-auto my-3">
+      <mat-progress-bar mode="determinate" class="text-start rounded-2" value="25"></mat-progress-bar>
+      <div class="w-100 text-center py-2 text-light">
+        <span style="font-size: 12px;">Pregunta 1 / 3</span>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12 text-end">
+      <button color="primary" mat-raised-button
+        class="rounded-5 text-light"><mat-icon>arrow_forward</mat-icon>Siguiente</button>
+    </div>
+  </div>
+</div>

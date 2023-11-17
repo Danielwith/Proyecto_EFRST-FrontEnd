@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './component/home/home.component';
 
 const routes: Routes = [
   {
@@ -12,6 +11,18 @@ const routes: Routes = [
     path: 'home',
     loadChildren: () =>
       import('./component/home/home.module').then((x) => x.HomeModule),
+  },
+  {
+    path: 'compatibility',
+    loadChildren: () =>
+      import('./component/compatibility/compatibility.module').then(
+        (x) => x.CompatibilityModule
+      ),
+  },
+  {
+    path: '**',
+    redirectTo: 'home',
+    pathMatch: 'full',
   },
 ];
 

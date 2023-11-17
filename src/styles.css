@@ -16,6 +16,7 @@ body {
   --secondary: #ffd33c;
   --light: #f3f3f3;
   --dark: #212121;
+  --default: #6750a4;
 }
 
 .accordion {

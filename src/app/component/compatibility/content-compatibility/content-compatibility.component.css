@@ -1,0 +1,8 @@
+.content-modal {
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(4px);
+}
+/*
+:host ::ng-deep .mdc-linear-progress__bar-inner {
+  border-color: var(--default);
+}*/

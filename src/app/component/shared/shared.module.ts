@@ -33,12 +33,14 @@ import { MatRadioModule } from '@angular/material/radio';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
 
 // Owl Carousel
 import { CarouselModule } from 'ngx-owl-carousel-o';
 
 // Ng Bootstrap
 import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbModalModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [],
@@ -72,9 +74,11 @@ import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
     MatPaginatorModule,
     MatSlideToggleModule,
     MatSortModule,
+    MatProgressBarModule,
     ReactiveFormsModule,
     FormsModule,
     NgbCarouselModule,
+    NgbModalModule,
   ],
   exports: [
     MatSliderModule,
@@ -105,10 +109,12 @@ import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
     MatPaginatorModule,
     MatSlideToggleModule,
     MatSortModule,
+    MatProgressBarModule,
     ReactiveFormsModule,
     FormsModule,
     CarouselModule,
     NgbCarouselModule,
+    NgbModalModule,
   ],
 })
 export class SharedModule {}

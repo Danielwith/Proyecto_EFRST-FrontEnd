@@ -1,0 +1,6 @@
+@import url(../../home/adopt-home/tabla-adopt/tabla-adopt.component.css);
+
+.content-modal {
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(4px);
+}

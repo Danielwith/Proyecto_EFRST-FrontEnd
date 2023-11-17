@@ -1,0 +1,12 @@
+.info-container {
+  margin-top: 1rem;
+}
+
+.info-title {
+  color: gray;
+}
+
+.info-text {
+  height: 120px;
+  overflow-y: scroll;
+}
