@@ -1,0 +1,57 @@
+<div class="container-fluid pt-5 mt-5">
+  <div class="container">
+    <div class="row">
+      <div class="border-start border-5 border-primary ps-4 mb-5">
+        <h6 class="text-primary text-uppercase">RETROALIMENTACION</h6>
+        <h1 class="display-5 text-uppercase mb-2 fw-bold">QUEJAS O SUGERENCIAS</h1>
+        <h4 class="text-body h6">
+          Si gustas dejarnos un comentario con gusto lo recibiremos.
+        </h4>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Donation Start -->
+<div class="container-fluid bg-donation py-5" style="margin: 45px 0;">
+  <div class="container py-5">
+    <div class="row justify-content-start">
+      <div class="col-5">
+        <form [formGroup]="form" class="bg-white px-4 py-4">
+          <div class="row w-50">
+            <mat-form-field>
+              <mat-label>Tipo:</mat-label>
+              <mat-select formControlName="id_tipo">
+                <mat-option value="0">
+                  Queja
+                </mat-option>
+                <mat-option value="1">
+                  Rer
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+          <div class="row w-100">
+            <mat-form-field>
+              <mat-label>Comentario</mat-label>
+              <textarea matInput formControlName="comentario" (input)="updateComentarioLength()"
+                style="height: 250px;"></textarea>
+              <mat-error *ngIf="form.get('comentario')?.hasError('required')">Debe ingresar su comentario</mat-error>
+              <mat-error *ngIf="form.get('comentario')?.hasError('maxlength')">No puede ser mayor de 150
+                caracteres</mat-error>
+              <div [ngClass]="{ 'max-length-exceeded': comentarioLength > 150 }" class="comentario-count">
+                {{ comentarioLength }} / 150
+              </div>
+            </mat-form-field>
+          </div>
+          <hr>
+          <div class="footer">
+            <button mat-raised-button color="primary" class="rounded-5 text-white"
+              (click)="open()"><mat-icon>send</mat-icon>Enviar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Donation End -->

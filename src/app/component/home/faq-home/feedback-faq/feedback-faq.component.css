@@ -1,0 +1,9 @@
+.comentario-count {
+  color: black;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+.comentario-count.max-length-exceeded {
+  color: red;
+}

@@ -1,0 +1,89 @@
+<div class="container-fluid bg-light py-5 mb-5">
+  <div class="container">
+    <div class="row">
+      <div class="col d-flex flex-column justify-content-center px-4">
+        <div class="d-flex align-items-center gap-4 mb-4">
+          <div class="item-number">
+            <span class="display-1 text-primary fw-bolder">1</span>
+          </div>
+          <div class="item-info">
+            <h6 class="text-primary text-uppercase mb-1">Rescate de Animales en Situaciones de Peligro:</h6>
+            <p class="m-0">"StayFriends" se dedica a rescatar animales callejeros en situaciones de peligro,
+              proporcionándoles
+              refugio, atención
+              médica y cariño.</p>
+          </div>
+        </div>
+        <div class="d-flex align-items-center gap-4 mb-4">
+          <div class="item-number">
+            <span class="display-1 text-primary fw-bolder">2</span>
+          </div>
+          <div class="item-info">
+            <h6 class="text-primary text-uppercase mb-1">Cuidado y Rehabilitación Compasiva:</h6>
+            <p class="m-0">La organización se esfuerza por brindar atención compasiva a los animales rescatados,
+              ayudándolos a superar traumas y
+              problemas de salud.</p>
+          </div>
+        </div>
+        <div class="d-flex align-items-center gap-4">
+          <div class="item-number">
+            <span class="display-1 text-primary fw-bolder">3</span>
+          </div>
+          <div class="item-info">
+            <h6 class="text-primary text-uppercase mb-1">Rescate de Animales en Situaciones de Peligro:</h6>
+            <p class="m-0">"StayFriends" no solo rescata animales, sino que también trabaja para encontrarles hogares
+              permanentes a través de
+              procesos de adopción responsables.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="border-start border-5 border-primary ps-4 mb-5">
+          <h1 class="display-5 text-uppercase mb-0 fw-bold">DONAR</h1>
+          <p class="h6">Tu donación es más que un gesto de generosidad; es un acto de compasión que cambia vidas.</p>
+        </div>
+        <form [formGroup]="form" class="px-4 py-4">
+          <div class="row">
+            <div class="col-6">
+              <mat-form-field>
+                <mat-label>Nombre:</mat-label>
+                <input matInput>
+              </mat-form-field>
+            </div>
+            <div class="col-6">
+              <mat-form-field>
+                <mat-label>Email:</mat-label>
+                <input matInput>
+              </mat-form-field>
+            </div>
+
+          </div>
+          <div class="row w-100">
+            <mat-form-field>
+              <mat-label>Cantidad:</mat-label>
+              <input matInput placeholder="Donación (PEN)">
+            </mat-form-field>
+          </div>
+          <div class="row w-100">
+            <mat-form-field>
+              <mat-label>Comentario</mat-label>
+              <textarea matInput formControlName="comentario" (input)="updateComentarioLength()"
+                style="height: 250px;"></textarea>
+              <mat-error *ngIf="form.get('comentario')?.hasError('required')">Debe ingresar su comentario</mat-error>
+              <mat-error *ngIf="form.get('comentario')?.hasError('maxlength')">No puede ser mayor de 150
+                caracteres</mat-error>
+              <div [ngClass]="{ 'max-length-exceeded': comentarioLength > 150 }" class="comentario-count">
+                {{ comentarioLength }} / 150
+              </div>
+            </mat-form-field>
+          </div>
+          <hr>
+          <div class="footer">
+            <button mat-raised-button color="primary"
+              class="rounded-5 text-white"><mat-icon>send</mat-icon>Donar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

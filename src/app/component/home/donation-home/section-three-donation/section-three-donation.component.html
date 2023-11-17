@@ -1,0 +1,34 @@
+<!-- Adoption Start -->
+<div class="container-fluid mt-5 py-5">
+  <div class="container">
+    <div class="text-center ps-4 mb-5">
+      <h2 class="text-primary text-uppercase mb-4">Nuestros donadores</h2>
+      <h6 class="mb-0 fw-bold">Gatinium dolor sit amet, consectetur adipiscing felis. Fusce gatinium nunc eget ante
+        interdum, quis lacinia felis
+        vulputate. Nulla gatinium purus, tempor eget sapien eget, tincidunt bibendum arcu. In hac habitasse platea
+        dictumst.</h6>
+    </div>
+    <!-- Carousel Start-->
+    <owl-carousel-o class="animal-carousel position-relative" [options]="configuracion" style="padding-right: 25px;">
+      <ng-template carouselSlide *ngFor="let animal of CARROUSEL_DATA">
+        <div class="animal-item">
+          <div class="position-relative overflow-hidden">
+            <img class="img-fluid w-100" src="./assets/img/cat.png" alt="">
+            <div class="animal-overlay">
+              <div class="d-flex align-items-center justify-content-start">
+                <a class="btn btn-light btn-square mx-1" href="#"><i class="bi bi-facebook"></i></a>
+                <a class="btn btn-light btn-square mx-1" href="#"><i class="bi bi-instagram"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="bg-light text-center p-4">
+            <h5 class="text-uppercase">{{animal.nombre}}</h5>
+            <p class="m-0">{{animal.personalidad}}</p>
+          </div>
+        </div>
+      </ng-template>
+    </owl-carousel-o>
+    <!-- Carousel End -->
+  </div>
+</div>
+<!-- Adoption End -->

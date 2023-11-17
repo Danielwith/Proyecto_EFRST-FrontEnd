@@ -21,6 +21,21 @@ import { AdoptHomeComponent } from './adopt-home/adopt-home.component';
 import { BannerAdoptComponent } from './adopt-home/banner-adopt/banner-adopt.component';
 import { TablaAdoptComponent } from './adopt-home/tabla-adopt/tabla-adopt.component';
 import { ModalAdoptComponent } from './adopt-home/modal-adopt/modal-adopt.component';
+import { CompromiseHomeComponent } from './compromise-home/compromise-home.component';
+import { ModalCompromiseComponent } from './compromise-home/modal-compromise/modal-compromise.component';
+import { FaqHomeComponent } from './faq-home/faq-home.component';
+import { DudasFaqComponent } from './faq-home/dudas-faq/dudas-faq.component';
+import { FeedbackFaqComponent } from './faq-home/feedback-faq/feedback-faq.component';
+import { ModalFaqComponent } from './faq-home/modal-faq/modal-faq.component';
+import { DonationHomeComponent } from './donation-home/donation-home.component';
+import { BannerDonationComponent } from './donation-home/banner-donation/banner-donation.component';
+import { SectionOneDonationComponent } from './donation-home/section-one-donation/section-one-donation.component';
+import { SectionTwoDonationComponent } from './donation-home/section-two-donation/section-two-donation.component';
+import { SectionThreeDonationComponent } from './donation-home/section-three-donation/section-three-donation.component';
+import { FormDonationComponent } from './donation-home/form-donation/form-donation.component';
+import { FavouriteHomeComponent } from './favourite-home/favourite-home.component';
+import { BannerFavouriteComponent } from './favourite-home/banner-favourite/banner-favourite.component';
+import { TablaFavouriteComponent } from './favourite-home/tabla-favourite/tabla-favourite.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +57,21 @@ import { ModalAdoptComponent } from './adopt-home/modal-adopt/modal-adopt.compon
     BannerAdoptComponent,
     TablaAdoptComponent,
     ModalAdoptComponent,
+    CompromiseHomeComponent,
+    ModalCompromiseComponent,
+    FaqHomeComponent,
+    DudasFaqComponent,
+    FeedbackFaqComponent,
+    ModalFaqComponent,
+    DonationHomeComponent,
+    BannerDonationComponent,
+    SectionOneDonationComponent,
+    SectionTwoDonationComponent,
+    SectionThreeDonationComponent,
+    FormDonationComponent,
+    FavouriteHomeComponent,
+    BannerFavouriteComponent,
+    TablaFavouriteComponent,
   ],
   imports: [CommonModule, HomeRoutingModule, SharedModule],
 })

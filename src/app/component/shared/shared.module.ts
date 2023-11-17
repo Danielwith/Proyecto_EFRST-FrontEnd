@@ -34,6 +34,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 
 // Owl Carousel
 import { CarouselModule } from 'ngx-owl-carousel-o';
@@ -75,6 +76,7 @@ import { NgbModalModule } from '@ng-bootstrap/ng-bootstrap';
     MatSlideToggleModule,
     MatSortModule,
     MatProgressBarModule,
+    MatCheckboxModule,
     ReactiveFormsModule,
     FormsModule,
     NgbCarouselModule,
@@ -110,6 +112,7 @@ import { NgbModalModule } from '@ng-bootstrap/ng-bootstrap';
     MatSlideToggleModule,
     MatSortModule,
     MatProgressBarModule,
+    MatCheckboxModule,
     ReactiveFormsModule,
     FormsModule,
     CarouselModule,
