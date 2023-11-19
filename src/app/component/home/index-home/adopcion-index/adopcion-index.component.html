@@ -19,15 +19,15 @@
             </div>
           </div>
           <div class="bg-light text-center p-4">
-            <h5 class="text-uppercase">{{animal.nombre}}</h5>
-            <p class="m-0">{{animal.personalidad}}</p>
+            <h5 class="text-uppercase">{{animal.pet_name}}</h5>
+            <p class="m-0">{{animal.pet_personality}}</p>
           </div>
         </div>
       </ng-template>
     </owl-carousel-o>
     <!-- Carousel End -->
     <div class="text-center">
-      <button class="btn-material-primary" mat-raised-button>
+      <button [routerLink]="['adopt']" class="btn-material-primary" mat-raised-button>
         <mat-icon>keyboard_arrow_down</mat-icon>Ver más
       </button>
 

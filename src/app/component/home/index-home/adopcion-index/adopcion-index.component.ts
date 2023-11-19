@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
+import { Pet } from 'src/app/model/pet.model';
+import { DataService } from 'src/app/service/data.service';
 
 interface AnimalCarrousel {
   nombre: string;
@@ -12,12 +14,9 @@ interface AnimalCarrousel {
   styleUrls: ['./adopcion-index.component.css'],
 })
 export class AdopcionIndexComponent {
-  CARROUSEL_DATA: AnimalCarrousel[] = [
-    { nombre: 'Alex', personalidad: 'Mucho amor' },
-    { nombre: 'Beto', personalidad: 'Mucho cariño' },
-    { nombre: 'Carlos', personalidad: 'Mucho afecto' },
-    { nombre: 'Sara', personalidad: 'Mucha curiosidad' },
-  ];
+  constructor(private data: DataService) {}
+
+  CARROUSEL_DATA: Pet[] = this.data.getPet();
 
   configuracion: OwlOptions = {
     autoplay: true,

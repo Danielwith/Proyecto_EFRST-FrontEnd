@@ -20,7 +20,6 @@ import { ContenidoCampaignComponent } from './campaign-home/contenido-campaign/c
 import { AdoptHomeComponent } from './adopt-home/adopt-home.component';
 import { BannerAdoptComponent } from './adopt-home/banner-adopt/banner-adopt.component';
 import { TablaAdoptComponent } from './adopt-home/tabla-adopt/tabla-adopt.component';
-import { ModalAdoptComponent } from './adopt-home/modal-adopt/modal-adopt.component';
 import { CompromiseHomeComponent } from './compromise-home/compromise-home.component';
 import { ModalCompromiseComponent } from './compromise-home/modal-compromise/modal-compromise.component';
 import { FaqHomeComponent } from './faq-home/faq-home.component';
@@ -36,6 +35,10 @@ import { FormDonationComponent } from './donation-home/form-donation/form-donati
 import { FavouriteHomeComponent } from './favourite-home/favourite-home.component';
 import { BannerFavouriteComponent } from './favourite-home/banner-favourite/banner-favourite.component';
 import { TablaFavouriteComponent } from './favourite-home/tabla-favourite/tabla-favourite.component';
+import { RedeemCodeHomeComponent } from './redeem-code-home/redeem-code-home.component';
+import { BannerRedeemCodeComponent } from './redeem-code-home/banner-redeem-code/banner-redeem-code.component';
+import { TablaRedeemCodeComponent } from './redeem-code-home/tabla-redeem-code/tabla-redeem-code.component';
+import { ModalAdoptComponent } from './adopt-home/modal-adopt/modal-adopt.component';
 
 @NgModule({
   declarations: [
@@ -72,6 +75,9 @@ import { TablaFavouriteComponent } from './favourite-home/tabla-favourite/tabla-
     FavouriteHomeComponent,
     BannerFavouriteComponent,
     TablaFavouriteComponent,
+    RedeemCodeHomeComponent,
+    BannerRedeemCodeComponent,
+    TablaRedeemCodeComponent,
   ],
   imports: [CommonModule, HomeRoutingModule, SharedModule],
 })

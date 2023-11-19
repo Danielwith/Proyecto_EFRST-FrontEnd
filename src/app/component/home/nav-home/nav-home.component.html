@@ -1,7 +1,6 @@
 <nav class="navbar navbar-expand-lg fixed-top bg-body-tertiary">
   <div class="container-fluid">
     <div class="d-flex justify-content-center align-items-center gap-1 ms-5">
-      <mat-icon>home</mat-icon>
       <a class="navbar-brand" href="#">StayFriends</a>
     </div>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
@@ -10,37 +9,34 @@
     </button>
     <div class="collapse navbar-collapse justify-content-evenly" id="navbarNavDropdown">
       <!-- INTERACCION EN PAGINA -->
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Inicio</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Campañas</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Adoptar</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Contacto</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Donar</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Iniciar Sesión</a>
-        </li>
-        <button type="button" mat-button>
-          Inicio
+      <ul class="navbar-nav mx-2">
+        <button [routerLink]="['home']" type="button" mat-button>
+          <mat-icon>home</mat-icon> Inicio
+        </button>
+        <button [routerLink]="['campaign']" type="button" mat-button>
+          <mat-icon>campaign</mat-icon>Campañas
+        </button>
+        <button [routerLink]="['adopt']" type="button" mat-button>
+          <mat-icon>pets</mat-icon>Adoptar
+        </button>
+        <button [routerLink]="['/compatibility/']" type="button" mat-button>
+          <mat-icon>extension</mat-icon>Compatibilidad
+        </button>
+        <button [routerLink]="['faq']" type="button" mat-button>
+          <mat-icon>question_answer</mat-icon>Preguntas Frecuentes
+        </button>
+        <button [routerLink]="['donation']" type="button" mat-button>
+          <mat-icon>monetization_on</mat-icon>Donar
         </button>
       </ul>
       <!-- INICIO DE SESION -->
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Inicio</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Campañas</a>
-        </li>
+      <ul class="navbar-nav mx-2">
+        <button [routerLink]="['favourite']" type="button" mat-button>
+          <mat-icon>favorite</mat-icon>Favoritos
+        </button>
+        <button [routerLink]="['codes']" type="button" mat-button>
+          <mat-icon>redeem</mat-icon>Mis Códigos
+        </button>
       </ul>
     </div>
   </div>

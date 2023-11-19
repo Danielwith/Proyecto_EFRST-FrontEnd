@@ -1,5 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { DataService } from 'src/app/service/data.service';
+import { Pet } from 'src/app/model/pet.model';
 import { ModalAdoptComponent } from '../../adopt-home/modal-adopt/modal-adopt.component';
 
 @Component({
@@ -9,6 +11,10 @@ import { ModalAdoptComponent } from '../../adopt-home/modal-adopt/modal-adopt.co
 })
 export class TablaFavouriteComponent {
   private modalService = inject(NgbModal);
+
+  constructor(private data: DataService) {}
+
+  FAVOURITE_DATA: Pet[] = this.data.getFavourites();
 
   open() {
     const modalRef = this.modalService.open(ModalAdoptComponent, {

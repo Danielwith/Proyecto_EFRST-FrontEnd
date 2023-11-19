@@ -1,7 +1,7 @@
 <div class="container w-50 rounded-2 py-2 content-modal">
   <div class="row">
     <div class="col-12 text-start">
-      <button mat-button><mat-icon>arrow_back</mat-icon>Volver</button>
+      <button [routerLink]="['/home/']" mat-button><mat-icon>arrow_back</mat-icon>Volver</button>
     </div>
   </div>
   <div class="row">
@@ -11,51 +11,14 @@
     <!-- animales -->
     <div class="container">
       <div class="row row-cols-3 px-5 mt-3 mb-5">
-        <div class="col">
+        <div class="col" *ngFor="let i of RESULT_DATA">
           <div class="w-auto my-2 bg-secondary rounded-1 card-item"
-            [ngStyle]="{'background-image': 'url(./assets/img/cat.png)'}" style="height: 240px;" (click)="open()">
+            [ngStyle]="{'background-image': 'url(./assets/img/cat.png)'}" style="height: 240px;" (click)="open(i.id)">
             <div class="d-flex flex-column justify-content-end h-100 position-relative">
               <div class="text-light text-start ps-2">
-                <h1 class="h5 fw-bold">Name</h1>
-                <h3 style="font-size: 12px;">Personalidad</h3>
+                <h1 class="h5 fw-bold">{{i.pet_name}}</h1>
+                <h3 style="font-size: 12px;">{{i.pet_personality}}</h3>
               </div>
-              <!-- <div class="text-end p-1 item-button">
-                                    <button mat-mini-fab class="item-icon">
-                                      <mat-icon class="text-white">favorite</mat-icon>
-                                    </button>
-                                  </div> -->
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="w-auto my-2 bg-secondary rounded-1 card-item"
-            [ngStyle]="{'background-image': 'url(./assets/img/cat.png)'}" style="height: 240px;" (click)="open()">
-            <div class="d-flex flex-column justify-content-end h-100 position-relative">
-              <div class="text-light text-start ps-2">
-                <h1 class="h5 fw-bold">Name</h1>
-                <h3 style="font-size: 12px;">Personalidad</h3>
-              </div>
-              <!-- <div class="text-end p-1 item-button">
-                                            <button mat-mini-fab class="item-icon">
-                                              <mat-icon class="text-white">favorite</mat-icon>
-                                            </button>
-                                          </div> -->
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="w-auto my-2 bg-secondary rounded-1 card-item"
-            [ngStyle]="{'background-image': 'url(./assets/img/cat.png)'}" style="height: 240px;" (click)="open()">
-            <div class="d-flex flex-column justify-content-end h-100 position-relative">
-              <div class="text-light text-start ps-2">
-                <h1 class="h5 fw-bold">Name</h1>
-                <h3 style="font-size: 12px;">Personalidad</h3>
-              </div>
-              <!-- <div class="text-end p-1 item-button">
-                                            <button mat-mini-fab class="item-icon">
-                                              <mat-icon class="text-white">favorite</mat-icon>
-                                            </button>
-                                          </div> -->
             </div>
           </div>
         </div>

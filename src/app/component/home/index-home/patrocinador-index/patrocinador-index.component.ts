@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
+import { Sponsor } from 'src/app/model/sponsor.model';
+import { DataService } from 'src/app/service/data.service';
 
 @Component({
   selector: 'app-patrocinador-index',
@@ -7,6 +9,10 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
   styleUrls: ['./patrocinador-index.component.css'],
 })
 export class PatrocinadorIndexComponent {
+  constructor(private data: DataService) {}
+
+  SPONSOR_DATA: Sponsor[] = this.data.getSponsors();
+
   configuracion: OwlOptions = {
     autoplay: true,
     smartSpeed: 1000,

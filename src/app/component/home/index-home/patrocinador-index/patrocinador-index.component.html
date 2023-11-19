@@ -6,53 +6,9 @@
     </div>
     <!-- Carousel Start-->
     <owl-carousel-o class="animal-carousel position-relative" [options]="configuracion">
-      <ng-template carouselSlide>
-        <div>
-          <div class="d-flex justify-content-center">
-            <img class="img-fluid w-75" src="./assets/img/mechanic-dog.jpg" alt="">
-          </div>
-        </div>
-      </ng-template>
-      <ng-template carouselSlide>
-        <div>
-          <div class="d-flex justify-content-center">
-            <img class="img-fluid w-75" src="./assets/img/mechanic-dog.jpg" alt="">
-          </div>
-        </div>
-      </ng-template>
-      <ng-template carouselSlide>
-        <div>
-          <div class="d-flex justify-content-center">
-            <img class="img-fluid w-75" src="./assets/img/mechanic-dog.jpg" alt="">
-          </div>
-        </div>
-      </ng-template>
-      <ng-template carouselSlide>
-        <div>
-          <div class="d-flex justify-content-center">
-            <img class="img-fluid w-75" src="./assets/img/mechanic-dog.jpg" alt="">
-          </div>
-        </div>
-      </ng-template>
-      <ng-template carouselSlide>
-        <div>
-          <div class="d-flex justify-content-center">
-            <img class="img-fluid w-75" src="./assets/img/mechanic-dog.jpg" alt="">
-          </div>
-        </div>
-      </ng-template>
-      <ng-template carouselSlide>
-        <div>
-          <div class="d-flex justify-content-center">
-            <img class="img-fluid w-75" src="./assets/img/mechanic-dog.jpg" alt="">
-          </div>
-        </div>
-      </ng-template>
-      <ng-template carouselSlide>
-        <div>
-          <div class="d-flex justify-content-center">
-            <img class="img-fluid w-75" src="./assets/img/mechanic-dog.jpg" alt="">
-          </div>
+      <ng-template carouselSlide *ngFor="let i of SPONSOR_DATA">
+        <div class="d-flex justify-content-center align-items-center" style="min-height: 150px;">
+          <img class="img-fluid w-75" [src]="i.sponsor_image" [alt]="i.sponsor_name">
         </div>
       </ng-template>
     </owl-carousel-o>

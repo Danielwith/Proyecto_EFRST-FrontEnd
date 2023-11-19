@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ModalAdoptComponent } from './modal-adopt.component';
+import { ModalAdoptComponent } from './ModalAdoptComponent';
 
 describe('ModalAdoptComponent', () => {
   let component: ModalAdoptComponent;
@@ -8,9 +8,8 @@ describe('ModalAdoptComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ModalAdoptComponent ]
-    })
-    .compileComponents();
+      declarations: [ModalAdoptComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(ModalAdoptComponent);
     component = fixture.componentInstance;

@@ -16,13 +16,13 @@
         <div class="row">
           <div class="container">
             <div class="row row-cols-6">
-              <div class="col">
+              <div class="col" *ngFor="let i of FAVOURITE_DATA">
                 <div class="w-auto my-2 bg-secondary rounded-1 card-item"
                   [ngStyle]="{'background-image': 'url(./assets/img/cat.png)'}" style="height: 240px;" (click)="open()">
                   <div class="d-flex flex-column justify-content-end h-100 position-relative">
                     <div class="text-light ps-2">
-                      <h1 class="h5 fw-bold">Name</h1>
-                      <h3 class="" style="font-size: 12px;">Personalidad</h3>
+                      <h1 class="h5 fw-bold">{{i.pet_name}}</h1>
+                      <h3 class="" style="font-size: 12px;">{{i.pet_personality}}</h3>
                     </div>
                     <!-- <div class="text-end p-1 item-button">
                       <button mat-mini-fab class="item-icon">
@@ -32,9 +32,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col">Column</div>
-              <div class="col">Column</div>
-              <div class="col">Column</div>
+
             </div>
           </div>
         </div>

@@ -1,0 +1,99 @@
+<!-- Table Start -->
+<div class="container-fluid">
+  <div class="container  border border-2">
+    <div class="row bg-light" style="height: 56px;">
+      <div class="d-flex justify-content-end align-items-center gap-2">
+        <div class="input-group w-auto">
+          <div class="btn-group">
+            <div ngbDropdown class="d-inline-block">
+              <button type="button" class="btn btn-outline-primary" style="width: 233.672px;" id="animal-status"
+                ngbDropdownToggle>
+                {{ selectedOption || 'Filtrar' }}
+              </button>
+              <div ngbDropdownMenu aria-labelledby="animal-status">
+                <button ngbDropdownItem (click)="select('Filtrar')">Sin Filtro</button>
+                <button ngbDropdownItem (click)="select('Valido')">Valido</button>
+                <button ngbDropdownItem (click)="select('Invalido')">Invalido</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-4 p-0">
+        <div class="d-flex flex-column overflow-y-scroll" style="height: 360px;">
+          <ng-container *ngFor="let i of CODE_DATA, let index = index">
+            <div class="item m-2 py-3 px-4 rounded-3 border border-1 border-black"
+              [ngClass]="{'bg-primary text-white': index === 0}" style="cursor: pointer;">
+              <h6>Expira: {{i.code_date | date: 'd-MM-YYYY'}}</h6>
+              <h2>{{i.code}}</h2>
+              <h6>Estado: {{i.code_status}}</h6>
+            </div>
+          </ng-container>
+        </div>
+
+      </div>
+      <div class="col-8 bg-dark-subtle">
+        <div class="row">
+          <div class="container">
+            <div class="row">
+              <div class="py-3 px-4">
+                <p>Este codigo es valido hasta dentro de “2” dias.</p>
+                <h6>Debes presentar esta información con el código para que nuestros trabajadores puedan llevar a cabo
+                  el proceso de
+                  adopción con éxito.</h6>
+                <div class="row">
+                  <div class="col-6">
+                    <div class="d-flex flex-column gap-1 mt-3">
+                      <div class="line">
+                        <span class="fw-bold me-1">• Datos de Adopción:</span>
+                      </div>
+                      <ng-container *ngFor="let x of INFO_CODE_DATA">
+                        <div class="line">
+                          <span class="fw-light ms-2 me-1">Mascota:</span><span>{{x.pet_name}}</span>
+                        </div>
+                        <div class="line">
+                          <span class="fw-light ms-2 me-1">Especie:</span><span>{{x.pet_species}}</span>
+                        </div>
+                        <div class="line">
+                          <span class="fw-light ms-2 me-1">Tamaño:</span><span>{{x.pet_size}}</span>
+                        </div>
+                        <div class="line">
+                          <span class="fw-light ms-2 me-1">Peso:</span><span>{{x.pet_weight}} Kg</span>
+                        </div>
+                        <div class="line">
+                          <span class="fw-light ms-2 me-1">Ubicación:</span><span>{{x.pet_ubication}}</span>
+                        </div>
+                        <div class="line">
+                          <span class="fw-light ms-2 me-1">Estado:</span><span>{{x.pet_status}}</span>
+                        </div>
+                        <div class="line">
+                          <span class="fw-light ms-2 me-1">Esterelizado:</span><span>{{x.pet_sterilized}}</span>
+                        </div>
+                      </ng-container>
+                    </div>
+                  </div>
+                  <div class="col-6 m-auto">
+                    <div class="text-center">
+                      <h5>Código:</h5>
+                      <h2 class="h1">{{CODE_DATA[0].code}}</h2>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Table End -->
+
+<mat-menu #menu="matMenu">
+  <div class="menu-logged">
+    <button mat-menu-item><mat-icon>account_circle</mat-icon>x</button>
+    <button mat-menu-item><mat-icon>exit_to_app</mat-icon>x</button>
+  </div>
+</mat-menu>

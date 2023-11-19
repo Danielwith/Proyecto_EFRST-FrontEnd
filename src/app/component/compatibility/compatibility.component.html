@@ -1,8 +1,9 @@
 <div class="container-fluid h-100 compatibility-screen">
   <div class="row h-100">
     <div class="col-12 text-center mt-auto mb-auto">
-      <!-- <app-content-compatibility></app-content-compatibility> -->
-      <app-result-compatibility></app-result-compatibility>
+      <app-content-compatibility id="e" class="d-none"
+        (emitChangeEvent)="execNextStep($event)"></app-content-compatibility>
+      <app-result-compatibility id="r" class=""></app-result-compatibility>
     </div>
   </div>
 </div>

@@ -8,6 +8,7 @@ import { CompromiseHomeComponent } from './compromise-home/compromise-home.compo
 import { FaqHomeComponent } from './faq-home/faq-home.component';
 import { DonationHomeComponent } from './donation-home/donation-home.component';
 import { FavouriteHomeComponent } from './favourite-home/favourite-home.component';
+import { RedeemCodeHomeComponent } from './redeem-code-home/redeem-code-home.component';
 
 const routes: Routes = [
   {
@@ -41,6 +42,10 @@ const routes: Routes = [
       {
         path: 'favourite',
         component: FavouriteHomeComponent,
+      },
+      {
+        path: 'codes',
+        component: RedeemCodeHomeComponent,
       },
     ],
   },

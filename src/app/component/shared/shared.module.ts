@@ -40,7 +40,10 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 
 // Ng Bootstrap
-import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
+import {
+  NgbCarouselModule,
+  NgbDropdownModule,
+} from '@ng-bootstrap/ng-bootstrap';
 import { NgbModalModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
@@ -81,6 +84,7 @@ import { NgbModalModule } from '@ng-bootstrap/ng-bootstrap';
     FormsModule,
     NgbCarouselModule,
     NgbModalModule,
+    NgbDropdownModule,
   ],
   exports: [
     MatSliderModule,
@@ -118,6 +122,7 @@ import { NgbModalModule } from '@ng-bootstrap/ng-bootstrap';
     CarouselModule,
     NgbCarouselModule,
     NgbModalModule,
+    NgbDropdownModule,
   ],
 })
 export class SharedModule {}
