@@ -18,7 +18,8 @@
             <div class="row row-cols-6">
               <div class="col" *ngFor="let i of FAVOURITE_DATA">
                 <div class="w-auto my-2 bg-secondary rounded-1 card-item"
-                  [ngStyle]="{'background-image': 'url(./assets/img/cat.png)'}" style="height: 240px;" (click)="open()">
+                  [ngStyle]="{'background-image': 'url('+i.pet_image}"
+                  style="height: 240px; background-position: center;" (click)="open(i.id)">
                   <div class="d-flex flex-column justify-content-end h-100 position-relative">
                     <div class="text-light ps-2">
                       <h1 class="h5 fw-bold">{{i.pet_name}}</h1>

@@ -9,4 +9,5 @@ export interface CampaignCarrousel {
   campaign_date: Date;
   campaign_description: string;
   campaign_active: boolean;
+  campaign_image: string;
 }

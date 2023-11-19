@@ -10,7 +10,7 @@
       <ng-template carouselSlide *ngFor="let animal of CARROUSEL_DATA">
         <div class="animal-item">
           <div class="position-relative overflow-hidden">
-            <img class="img-fluid w-100" src="./assets/img/cat.png" alt="">
+            <img class="img-fluid w-100" [src]="animal.pet_image" style="height: 170.453px; object-fit: cover;" alt="">
             <div class="animal-overlay">
               <div class="d-flex align-items-center justify-content-start">
                 <a class="btn btn-light btn-square mx-1" href="#"><i class="bi bi-heart-fill"></i></a>

@@ -8,37 +8,35 @@
       <div class="row">
         <div class="col-md-6 px-5">
           <div class="container-fluid px-4 border border-1" style="height: 300px;">
-            <div class="bg-danger h-100" [ngStyle]="{'background-image':'url(./assets/img/cat.png)'}"
+            <div class="bg-danger h-100" [ngStyle]="{'background-image':'url('+PET_DATA[0].pet_image}"
               style="background-position: left; background-size: cover;">
             </div>
           </div>
           <div class="d-flex flex-column gap-1 mt-3">
             <div class="line">
-              <span class="fw-bold me-1">• Genero:</span><span>{{PET_DATA[0].pet_species}}</span>
+              <span class="fw-bold me-1">• Especie:</span><span>{{PET_DATA[0].pet_species}}</span>
             </div>
             <div class="line">
-              <span class="fw-bold me-1">• Edad:</span><span>4</span>
+              <span class="fw-bold me-1">• Edad:</span><span>{{PET_DATA[0].pet_age}}</span>
             </div>
             <div class="line">
-              <span class="fw-bold me-1">• Peso:</span><span>45 Kg</span>
+              <span class="fw-bold me-1">• Peso:</span><span>{{PET_DATA[0].pet_weight}} Kg</span>
             </div>
             <div class="line">
-              <span class="fw-bold me-1">• Piel:</span><span>Gris con blanco</span>
+              <span class="fw-bold me-1">• Tamaño:</span><span>{{PET_DATA[0].pet_size}} cm</span>
             </div>
           </div>
         </div>
         <div class="col-md-6 px-5">
           <div class="header">
-            <h2 class="text-uppercase h1">alex</h2>
+            <h2 class="text-uppercase h1">{{PET_DATA[0].pet_name}}</h2>
           </div>
           <div class="info-container">
             <div class="info-title">
               <h6 class="">Descripcion:</h6>
             </div>
             <div class="info-text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero cumque a animi fugit, quidem doloribus odio
-              ratione porro inventore repellat voluptatibus quod ipsa aliquam perferendis debitis aliquid nulla
-              deleniti. Pariatur.
+              {{PET_DATA[0].pet_description}}
             </div>
           </div>
           <div class="info-container">
@@ -47,20 +45,16 @@
             </div>
             <div class="info-text">
               <div class="line">
-                <span class="fw-bold me-1">• Curioso:</span><span>Siempre está explorando, investigando y descubriendo
-                  cosas nuevas.</span>
-              </div>
-              <div class="line">
-                <span class="fw-bold me-1">• Sociable:</span><span>Le gusta interactuar, jugar y compartir tiempo con
-                  quienes los rodean.</span>
+                <span class="fw-bold me-1">• {{PET_DATA[0].pet_personality}}</span>
               </div>
             </div>
           </div>
           <div class="footer mt-3">
             <div class="d-flex justify-content-between align-items-center gap-3 px-4">
               <button mat-raised-button color="primary" class="p-4 rounded-3 text-uppercase text-white w-100"
+                [routerLink]="['/home/compromise']" (click)="activeModal.dismiss()"
                 style="height: 56px;">ADOPTAR</button>
-              <button mat-fab class="rounded-3 bg-white">
+              <button mat-fab class="rounded-3 bg-white" (click)="favourite()">
                 <mat-icon>favorite</mat-icon>
               </button>
             </div>

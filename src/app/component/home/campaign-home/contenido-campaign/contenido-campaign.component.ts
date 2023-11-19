@@ -36,8 +36,12 @@ export class ContenidoCampaignComponent {
   }
 
   suscribeToCampaign() {
-    this.snackBar.open('Gracias por tu interés!', 'OK', {
-      duration: 4500,
-    });
+    this.snackBar.open(
+      'Gracias por tu interés! Te informaremos acerca de esta campaña por correo.',
+      'OK',
+      {
+        duration: 4500,
+      }
+    );
   }
 }

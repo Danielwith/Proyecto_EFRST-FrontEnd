@@ -24,7 +24,7 @@ export class DataService {
         pet_age: 2,
         pet_weight: 15,
         pet_size: 30,
-        pet_image: './assets/img/pet/buddy.jpg',
+        pet_image: './assets/img/pet/buddy.webp',
         pet_status: 'Disponible',
         pet_personality: 'Energético',
         pet_ubication: 'Refugio ABC',
@@ -39,7 +39,7 @@ export class DataService {
         pet_age: 1,
         pet_weight: 10,
         pet_size: 25,
-        pet_image: './assets/img/pet/whiskers.jpg',
+        pet_image: './assets/img/pet/whiskers.webp',
         pet_status: 'Adoptado',
         pet_personality: 'Juguetón',
         pet_ubication: 'Refugio XYZ',
@@ -54,7 +54,7 @@ export class DataService {
         pet_age: 3,
         pet_weight: 20,
         pet_size: 35,
-        pet_image: './assets/img/pet/rocky.jpg',
+        pet_image: './assets/img/pet/rocky.avif',
         pet_status: 'Disponible',
         pet_personality: 'Valiente',
         pet_ubication: 'Refugio ABC',
@@ -114,7 +114,7 @@ export class DataService {
         pet_age: 2,
         pet_weight: 18,
         pet_size: 32,
-        pet_image: './assets/img/pet/rusty.jpg',
+        pet_image: './assets/img/pet/rusty.jpeg',
         pet_status: 'Disponible',
         pet_personality: 'Curioso',
         pet_ubication: 'Refugio ABC',
@@ -144,7 +144,7 @@ export class DataService {
         pet_age: 1,
         pet_weight: 14,
         pet_size: 29,
-        pet_image: './assets/img/pet/coco.jpg',
+        pet_image: './assets/img/pet/coco.avif',
         pet_status: 'Disponible',
         pet_personality: 'Cariñoso',
         pet_ubication: 'Refugio ABC',
@@ -204,7 +204,7 @@ export class DataService {
         pet_age: 3,
         pet_weight: 14,
         pet_size: 28,
-        pet_image: './assets/img/pet/oliver.jpg',
+        pet_image: './assets/img/pet/oliver.webp',
         pet_status: 'Disponible',
         pet_personality: 'Travieso',
         pet_ubication: 'Refugio ABC',
@@ -234,7 +234,7 @@ export class DataService {
         pet_age: 1,
         pet_weight: 9,
         pet_size: 20,
-        pet_image: './assets/img/pet/chloe.jpg',
+        pet_image: './assets/img/pet/chloe.jpeg',
         pet_status: 'Adoptado',
         pet_personality: 'Dulce',
         pet_ubication: 'Refugio ABC',
@@ -294,7 +294,7 @@ export class DataService {
         pet_age: 2,
         pet_weight: 10,
         pet_size: 24,
-        pet_image: './assets/img/pet/mia.jpg',
+        pet_image: './assets/img/pet/mia.webp',
         pet_status: 'Disponible',
         pet_personality: 'Amigable',
         pet_ubication: 'Refugio ABC',
@@ -331,6 +331,7 @@ export class DataService {
             campaign_description:
               'Celebra la llegada de la primavera adoptando a una nueva mascota. ¡Encuentra a tu compañero peludo!',
             campaign_active: false,
+            campaign_image: './assets/img/campaign/adopcion_primavera.avif',
           },
           {
             id: 6,
@@ -339,6 +340,7 @@ export class DataService {
             campaign_description:
               'Ayuda a rescatar a animales abandonados y dales una segunda oportunidad en la vida.',
             campaign_active: false,
+            campaign_image: './assets/img/campaign/rescate_animales.jpg',
           },
           {
             id: 7,
@@ -347,6 +349,7 @@ export class DataService {
             campaign_description:
               'Únete a nuestra campaña de adopción de verano y brinda un hogar a un amigo de cuatro patas.',
             campaign_active: false,
+            campaign_image: './assets/img/campaign/adopcion_verano.jpg',
           },
         ],
       },
@@ -360,6 +363,7 @@ export class DataService {
             campaign_description:
               '¡Acompáñanos en nuestra campaña de adopción de verano y da un hogar a un amigo peludo!',
             campaign_active: false,
+            campaign_image: './assets/img/campaign/adopcion_verano_2023.jpg',
           },
           {
             id: 2,
@@ -368,6 +372,7 @@ export class DataService {
             campaign_description:
               'Ayúdanos a rescatar a animales necesitados durante el frío invierno. ¡Tu apoyo es esencial!',
             campaign_active: true,
+            campaign_image: './assets/img/campaign/rescate_invierno.jpg',
           },
           {
             id: 3,
@@ -376,8 +381,9 @@ export class DataService {
             campaign_description:
               'Dediquemos nuestro amor y cuidado a las mascotas mayores. ¡Únete a nuestra campaña!',
             campaign_active: false,
+            campaign_image:
+              './assets/img/campaign/cuidado_mascotas_mayores.jpg',
           },
-
           {
             id: 4,
             campaign_name: 'Campaña de Adopción Especial',
@@ -385,6 +391,7 @@ export class DataService {
             campaign_description:
               'Descubre a nuestras mascotas especiales que necesitan un hogar lleno de amor y atención.',
             campaign_active: false,
+            campaign_image: './assets/img/campaign/adopcion_especial.jpg',
           },
         ],
       },
@@ -446,24 +453,28 @@ export class DataService {
         story_title: 'Transformando Vidas: El Rescate de Luna',
         story_info:
           'Gracias a las generosas donaciones, pudimos rescatar a Luna, una perrita abandonada. Después de cuidados y rehabilitación, Luna ahora disfruta de un hogar amoroso y está llena de vida. Tu contribución hace posible cambiar vidas como la de Luna.',
+        story_image: './assets/img/donation/transformando_vidas.jpg',
       },
       {
         story_date: new Date('2023-03-22'),
         story_title: 'Construyendo Refugios Seguros',
         story_info:
           'Las donaciones han permitido mejorar nuestras instalaciones para brindar refugio y comodidad a más animales necesitados. Con tu apoyo continuo, podemos seguir construyendo refugios seguros y sostenibles para aquellos que no tienen voz.',
+        story_image: './assets/img/donation/refugios_seguros.jpg',
       },
       {
         story_date: new Date('2023-04-18'),
         story_title: 'Cuidado Médico para Rescates Urgentes',
         story_info:
           'Tu donación contribuye directamente al cuidado médico urgente que necesitan muchos de nuestros rescates. Desde tratamientos veterinarios hasta cirugías, cada contribución ayuda a garantizar que todos los animales reciban la atención que merecen.',
+        story_image: './assets/img/donation/cuidado_medico.webp',
       },
       {
         story_date: new Date('2023-05-10'),
         story_title: 'Promoviendo la Adopción Responsable',
         story_info:
           'StayFriends no solo rescata, sino que también fomenta la adopción responsable. Gracias a las donaciones, podemos llevar a cabo campañas educativas y eventos de adopción para encontrar hogares amorosos y permanentes para nuestros animales rescatados.',
+        story_image: './assets/img/donation/adopcion_responsable.avif',
       },
     ];
 
@@ -476,41 +487,49 @@ export class DataService {
         donor_name: 'Ana García',
         donor_reason:
           'Contribuir al cuidado médico y encontrar hogares amorosos para animales necesitados.',
+        donor_image: './assets/img/donor/ana_garcia.jpg',
       },
       {
         donor_name: 'Carlos Martínez',
         donor_reason:
           'Impactado por la historia de Luna, quiero ser parte del cambio positivo para más animales.',
+        donor_image: './assets/img/donor/carlos_martinez.jpg',
       },
       {
         donor_name: 'Isabel Rodríguez',
         donor_reason:
           'Apoyar la construcción de refugios seguros y promover la adopción responsable.',
+        donor_image: './assets/img/donor/isabel_rodriguez.jpg',
       },
       {
         donor_name: 'Miguel Sánchez',
         donor_reason:
           'Admiro la rehabilitación de animales por StayFriends y quiero ser parte de ese impacto positivo.',
+        donor_image: './assets/img/donor/miguel_sanchez.avif',
       },
       {
         donor_name: 'Laura Díaz',
         donor_reason:
           'Inspirada por la dedicación de StayFriends en el rescate, mi donación es un pequeño aporte para una gran diferencia.',
+        donor_image: './assets/img/donor/laura_diaz.avif',
       },
       {
         donor_name: 'Juan López',
         donor_reason:
           'Cada animal merece amor. Mi donación es para garantizar que más animales tengan la oportunidad de vivir plenamente.',
+        donor_image: './assets/img/donor/juan_lopez.jpg',
       },
       {
         donor_name: 'María Fernández',
         donor_reason:
           'Como amante de los animales, estoy comprometida con organizaciones que mejoran sus vidas.',
+        donor_image: './assets/img/donor/maria_fernandez.avif',
       },
       {
         donor_name: 'Pedro Ramírez',
         donor_reason:
           'Cada contribución cuenta. Mi donación respalda los esfuerzos de StayFriends en el rescate y cuidado de animales.',
+        donor_image: './assets/img/donor/pedro_ramirez.jfif',
       },
     ];
 
